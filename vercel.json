@@ -1,9 +1,13 @@
 {
-  "version": 2,
-  "builds": [
+  "functions": {
+    "src/index.ts": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "rewrites": [
     {
-      "src": "./src/index.ts",
-      "use": "@vercel/node"
+      "source": "/:match*",
+      "destination": "/src/:match*"
     }
   ]
 }
