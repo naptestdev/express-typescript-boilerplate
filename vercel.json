@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "scripts": {
-    "vercel-build": "npm run build"
-  },
   "builds": [
     {
-      "src": "./dist/index.js",
+      "src": "./index.js",
       "use": "@vercel/node"
     }
   ],
