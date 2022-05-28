@@ -1,13 +1,18 @@
 {
-  "functions": {
-    "src/index.ts": {
-      "runtime": "@vercel/node"
-    }
+  "version": 2,
+  "scripts": {
+    "vercel-build": "npm run build"
   },
-  "rewrites": [
+  "builds": [
     {
-      "source": "/:match*",
-      "destination": "/src/:match*"
+      "src": "./dist/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
